@@ -3,17 +3,17 @@ package dz.hichsali.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "guides")
+@Document(collection = "guide")
 public class Guide {
     @Id
     private String id;
-    private String nom,prenom,datenai,telephone,email,description,photo;
-
-    public Guide(String nom, String prenom, String datenai, String telephone, String email, String description, String photo) {
+    private String nom,prenom,telephone,email,description,photo;
+     private int age;
+    public Guide(String nom, String prenom, int age, String telephone, String email, String description, String photo) {
 
         this.nom = nom;
         this.prenom = prenom;
-        this.datenai = datenai;
+        this.age = age;
         this.telephone = telephone;
         this.email = email;
         this.description = description;
@@ -48,12 +48,12 @@ public class Guide {
         this.prenom = prenom;
     }
 
-    public String getDatenai() {
-        return datenai;
+    public int getAge() {
+        return age;
     }
 
-    public void setDatenai(String datenai) {
-        this.datenai = datenai;
+    public void setAge(int age) {
+        this.age = age;
     }
 
     public String getTelephone() {

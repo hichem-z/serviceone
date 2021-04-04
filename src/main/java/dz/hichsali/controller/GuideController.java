@@ -26,7 +26,6 @@ public class GuideController {
 
     @GetMapping("/getGuides")
     public List<Guide> getGuides(){
-        System.out.println(guideService.getGuides().get(0).getEmail()+" "+guideService.getGuides().get(0).getId());
         return guideService.getGuides();
     }
 }
