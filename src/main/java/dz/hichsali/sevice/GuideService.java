@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface GuideService {
 
-    public void addGuide(Guide guide);
+    public Guide addGuide(Guide guide);
     public List<Guide> getGuides();
 
 }

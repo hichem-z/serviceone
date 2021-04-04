@@ -17,8 +17,8 @@ public class GuideServiceImp implements GuideService{
 
 
     @Override
-    public void addGuide(Guide guide) {
-        gd.insert(guide);
+    public Guide addGuide(Guide guide) {
+        return gd.insert(guide);
     }
 
     @Override

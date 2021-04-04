@@ -19,9 +19,9 @@ public class GuideController {
 
 
     @RequestMapping(value = "/add",method = RequestMethod.POST)
-    public void addGuide(@RequestBody Guide guide){
+    public Guide addGuide(@RequestBody Guide guide){
         System.out.println(guide.getEmail());
-        guideService.addGuide(guide);
+        return guideService.addGuide(guide);
     }
 
     @GetMapping("/getGuides")
