@@ -15,10 +15,9 @@ public class GuideServiceImp implements GuideService{
     @Autowired
     GuideDao gd;
 
-
     @Override
     public Guide addGuide(Guide guide) {
-        return gd.insert(guide);
+        return gd.save(guide);
     }
 
     @Override

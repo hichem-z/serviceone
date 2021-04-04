@@ -6,11 +6,11 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "guide")
 public class Guide {
     @Id
-    private String id;
+    private String _id;
     private String nom,prenom,telephone,email,description,photo;
      private int age;
-    public Guide(String nom, String prenom, int age, String telephone, String email, String description, String photo) {
-
+    public Guide(String _id,String nom, String prenom, int age, String telephone, String email, String description, String photo) {
+            this._id=_id;
         this.nom = nom;
         this.prenom = prenom;
         this.age = age;
@@ -23,14 +23,13 @@ public class Guide {
     public Guide() {
     }
 
-    public String getId() {
-        return id;
+    public String get_id() {
+        return _id;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void set_id(String _id) {
+        this._id = _id;
     }
-
 
     public String getNom() {
         return nom;
